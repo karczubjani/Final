@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Country;
+use App\Models\City;
 
 class RegisterController extends Controller
 {
@@ -56,8 +57,6 @@ class RegisterController extends Controller
          return view('auth.register', compact('countries'));
      }
 
-
-
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -67,7 +66,7 @@ class RegisterController extends Controller
             'varos' => ['string', 'required'],
             'telszam'=> ['required'],
             'szuldate'=> ['date', 'required'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:4', 'confirmed'],
         ]);
     }
 
