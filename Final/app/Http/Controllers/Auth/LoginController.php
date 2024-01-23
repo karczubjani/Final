@@ -47,8 +47,10 @@ class LoginController extends Controller
         ]);
     }
 
-    protected function authenticated(Request $request, $user)
+    protected $redirectTo = '/profile'; // Átirányítás a sikeres bejelentkezés után
+
+    public function __construct()
     {
-        return redirect()->route('/home')->with('success', 'Sikeres bejelentkezés!');
+        $this->middleware('guest')->except('logout');
     }
 }
