@@ -9,12 +9,22 @@
 <body class="d-flex justify-content-center align-items-center m-5" style="background-color: rgba(0,0,255,.1)">
     
     <div class="border border-black p-3 d-flex justify-content-center flex-column h-100 d-inline-block" style="width: 1050px; background-color: rgb(255, 255, 255)">
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <form class="col-md-12"  method="POST" action="{{ route('register') }}">
         @csrf
         <div class="col-md-12">
         <div class="col-md-12 d-flex justify-content-center p-1">
         <h2 class="col-md-6 d-flex justify-content-center">Regisztráció</h2>
         <br><br><br>
+        
         </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -38,7 +48,7 @@
             <div class="form-group col-md-6">
                 <label for="varos">Város:</label>
                 <input type="text" name="varos" class="form-control" id="varos" placeholder="Város">
-              </div>
+            </div>
           <div class="form-group col-md-6">
             <label for="telszam">Telefonszám:</label>
             <input type="text" name="telszam" class="form-control" id="telszam" placeholder="Adja meg telefonszámát">
@@ -69,6 +79,33 @@
                 Már van fiókja? <a href="{{ route('login') }}">Lépjen be itt</a>
             </div>
             </div>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+            <script>
+                $(document).ready(function () {
+                    $('#orszag').change(function () {
+                        var countryId = $(this).val();
+                        if (countryId) {
+                            $.ajax({
+                                type: "GET",
+                                url: "/get-cities/" + countryId,
+                                success: function (res) {
+                                    if (res) {
+                                        varosSelect = $("#varos");
+                                        varosSelect.empty();
+                                        $.each(res, function (key, value) {
+                                            varosSelect.append('<option value="' + value + '">' + value + '</option>');
+                                        });
+                                    } else {
+                                        $("#varos").empty();
+                                    }
+                                }
+                            });
+                        } else {
+                            $("#varos").empty();
+                        }
+                    });
+                });
+            </script>
 </body>
 </html>

@@ -66,6 +66,21 @@ class RegisterController extends Controller
             'telszam'=> ['required'],
             'szuldate'=> ['date', 'required'],
             'password' => ['required', 'string', 'min:4', 'confirmed'],
+        ],[
+            'name.required' => 'A név megadása kötelező.',
+            'name.max' => 'A név maximum 255 karakter lehet.',
+            'email.required' => 'Az email cím megadása kötelező.',
+            'email.email' => 'Az email cím formátuma érvénytelen.',
+            'email.max' => 'Az email cím maximum 255 karakter lehet.',
+            'email.unique' => 'Ez az email cím már foglalt.',
+            'orszag.required' => 'Az ország kiválasztása kötelező.',
+            'varos.required' => 'A város megadása kötelező.',
+            'telszam.required' => 'A telefonszám megadása kötelező.',
+            'szuldate.required' => 'A születési dátum megadása kötelező.',
+            'szuldate.date' => 'A születési dátum formátuma érvénytelen.',
+            'password.required' => 'A jelszó megadása kötelező.',
+            'password.min' => 'A jelszó minimum 4 karakter hosszú legyen.',
+            'password.confirmed' => 'A jelszavak nem egyeznek.',
         ]);
     }
 
