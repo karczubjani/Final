@@ -78,34 +78,6 @@
             <div class="d-flex justify-content-center">
                 Már van fiókja? <a href="{{ route('login') }}">Lépjen be itt</a>
             </div>
-            </div>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-            <script>
-                $(document).ready(function () {
-                    $('#orszag').change(function () {
-                        var countryId = $(this).val();
-                        if (countryId) {
-                            $.ajax({
-                                type: "GET",
-                                url: "/get-cities/" + countryId,
-                                success: function (res) {
-                                    if (res) {
-                                        varosSelect = $("#varos");
-                                        varosSelect.empty();
-                                        $.each(res, function (key, value) {
-                                            varosSelect.append('<option value="' + value + '">' + value + '</option>');
-                                        });
-                                    } else {
-                                        $("#varos").empty();
-                                    }
-                                }
-                            });
-                        } else {
-                            $("#varos").empty();
-                        }
-                    });
-                });
-            </script>
+            </div> 
 </body>
 </html>
