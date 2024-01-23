@@ -8,5 +8,18 @@
 </head>
 <body class="d-flex justify-content-center align-items-center m-5" style="background-color: rgba(0,0,255,.1)">
     <div>ÜDV</div>
+    <br>
+    <br>
+    <div>
+        <a href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+            Kijelentkezés
+        </a>
+    
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+    </div>
 </body>
 </html>

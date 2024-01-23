@@ -66,7 +66,7 @@ class RegisterController extends Controller
             'varos' => ['string', 'required'],
             'telszam'=> ['required'],
             'szuldate'=> ['date', 'required'],
-            'password' => ['required', 'string', 'min:4', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 

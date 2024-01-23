@@ -35,11 +35,9 @@
             </div>
             
             <div class="form-group col-md-6">
-                <label for="varos">Város:</label>
-                <select name="varos" class="form-control" id="varos" placeholder="Varos">
-                    <option value="" disabled selected>Válassz egy várost</option>
-                </select>
-            </div>
+                <label for="varos">Varos:</label>
+                <input type="text" name="varos" class="form-control" id="varos" placeholder="Varos">
+              </div>
           <div class="form-group col-md-6">
             <label for="telszam">Telefonszám:</label>
             <input type="number" name="telszam" class="form-control" id="telszam" placeholder="Telefonszam">
@@ -68,5 +66,6 @@
                 Már van fiókod? <a href="{{ route('login') }}">Belépés</a>
             </div>
             </div>
+
 </body>
 </html>
