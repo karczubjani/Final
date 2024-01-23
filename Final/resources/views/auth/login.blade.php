@@ -14,16 +14,17 @@
         <div class="col-md-12">
         <div class="col-md-12 d-flex justify-content-center p-1">
         <h2 class="col-md-6 d-flex justify-content-center">Belépés</h2>
+        <br><br><br>
         </div>
         <div class="d-flex justify-content-center">
             <div class="form-group col-md-12 d-flex justify-content-center">
               <div class="form-group col-md-6">
-                <label for="email">E-mail cim:</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Email" autocomplete="given-email">
+                <label for="email">E-mail cím:</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Adja meg az E-mail címét" autocomplete="given-email">
               </div>
             <div class="form-group col-md-6">
               <label for="password">Jelszó:</label>
-              <input type="password" name="password" class="form-control" id="password" placeholder="Jelszo">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Adja meg jelszavát">
             </div>
         </div>
         </div>
@@ -32,9 +33,10 @@
             </div>
             </div>
     </form>
+    <br>
     <div class="col-md-12 d-flex justify-content-center flex-column">
-    <div>
-        Nincs még fiókod? <a href="{{ route('register') }}">Regisztráció</a>
+    <div class="d-flex justify-content-center">
+        Nincs még fiókja? <a href="{{ route('register') }}">Regisztráció</a>
     </div>
     </div>
     </div>

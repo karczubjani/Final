@@ -14,15 +14,16 @@
         <div class="col-md-12">
         <div class="col-md-12 d-flex justify-content-center p-1">
         <h2 class="col-md-6 d-flex justify-content-center">Regisztráció</h2>
+        <br><br><br>
         </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="name">Név:</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Írja be a nevét">
                   </div>
               <div class="form-group col-md-6">
                 <label for="email">E-mail cím:</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" name="email" class="form-control" id="email" placeholder="Adja meg E-mail címét">
               </div>
               <div class="form-group col-md-6">
                 <label for="orszag">Ország:</label>
@@ -35,35 +36,37 @@
             </div>
             
             <div class="form-group col-md-6">
-                <label for="varos">Varos:</label>
-                <input type="text" name="varos" class="form-control" id="varos" placeholder="Varos">
+                <label for="varos">Város:</label>
+                <input type="text" name="varos" class="form-control" id="varos" placeholder="Város">
               </div>
           <div class="form-group col-md-6">
             <label for="telszam">Telefonszám:</label>
-            <input type="number" name="telszam" class="form-control" id="telszam" placeholder="Telefonszam">
+            <input type="text" name="telszam" class="form-control" id="telszam" placeholder="Adja meg telefonszámát">
           </div>
             <div class="form-group col-md-6">
                 <label for="szuldate">Születési Dátum:</label>
-                <input type="date" name="szuldate" class="form-control" id="szuldate" placeholder="szuldate">
+                <input type="date" name="szuldate" class="form-control" id="szuldate">
             </div>
             <div class="form-group col-md-6">
               <label for="password">Jelszó:</label>
-              <input type="password" name="password" class="form-control" id="password" placeholder="Jelszo">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Adja meg jelszavát">
             </div>
             <div class="form-group col-md-6">
-              <label for="password_confirmation">Jelszó Ismét:</label>
-              <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Jelszo Ismet">
+              <label for="password_confirmation">Adja meg újra a jelszavát:</label>
+              <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" placeholder="Ismételje meg a jelszavát">
             </div>
         </div>
+        <br>
               <div class="col-md-12 d-flex justify-content-center">
               <button type="submit" class="btn btn-primary">Regisztráció</button>
             </div>
             </div>
     </form>
+    <br>
     <div>
         <div class="col-md-12 d-flex justify-content-center flex-column">
-            <div>
-                Már van fiókod? <a href="{{ route('login') }}">Belépés</a>
+            <div class="d-flex justify-content-center">
+                Már van fiókja? <a href="{{ route('login') }}">Lépjen be itt</a>
             </div>
             </div>
 
