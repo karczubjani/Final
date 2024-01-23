@@ -26,9 +26,13 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="orszag">Ország:</label>
-                <input type="text" name="orszag" class="form-control" id="orszag" placeholder="orszag" required>
+                <select name="orszag" class="form-control" id="orszag" required>
+                    <option value="" disabled selected>Válassz egy országot</option>
+                    @foreach($countries as $country)
+                        <option value="{{ $country->name }}">{{ $country->name }}</option>
+                    @endforeach
                 </select>
-              </div>
+            </div>
           <div class="form-group col-md-6">
             <label for="varos">Város:</label>
             <input type="text" name="varos" class="form-control" id="varos" placeholder="Varos">
