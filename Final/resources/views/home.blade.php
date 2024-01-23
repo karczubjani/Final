@@ -7,7 +7,9 @@
     <title>Profil</title>
 </head>
 <body class="d-flex justify-content-center align-items-center m-5" style="background-color: rgba(0,0,255,.1)">
-    <div>ÜDV</div>
+    <div>
+    <h1>Üdvözöllek, {{ Auth::user()->name }}!</h1>
+        <p>Ez a profil oldal.</p></div>
     <br>
     <br>
     <div>

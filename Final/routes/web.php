@@ -23,3 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('get-countries', [CountryController::class, 'getCountries']);
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/login', [LoginController::class, 'login'])->name('login.custom');
+Route::get('/home', function () {
+    return view('home');
+})->middleware(['auth'])->name('home');
